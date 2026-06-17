@@ -58,8 +58,8 @@ export default function Hero() {
       </div>
 
       {/* Content grid */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
           {/* Left column — copy */}
           <motion.div
@@ -71,7 +71,7 @@ export default function Hero() {
             {/* Eyebrow */}
             <motion.p
               variants={itemVariants}
-              className="text-[11px] font-medium text-white/55 tracking-[0.28em] uppercase mb-8"
+              className="text-[11px] font-medium text-white/55 tracking-[0.28em] uppercase mb-5"
             >
               Hawthorne, CA &nbsp;·&nbsp; CSLB B1049017
             </motion.p>
