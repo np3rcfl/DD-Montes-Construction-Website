@@ -42,7 +42,7 @@ const services = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-[60px]">
+    <section className="relative min-h-[100dvh] flex items-start overflow-hidden pt-[60px]">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
