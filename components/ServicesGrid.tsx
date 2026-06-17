@@ -97,7 +97,7 @@ export default function ServicesGrid() {
 
         {/* Asymmetric bento grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-12 gap-4"
+          className="grid grid-cols-2 md:grid-cols-12 gap-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -106,9 +106,9 @@ export default function ServicesGrid() {
           {/* Kitchen — large hero card */}
           <motion.div
             variants={cardVariants}
-            className="md:col-span-7 group"
+            className="col-span-2 md:col-span-7 group"
           >
-            <div className="h-full bg-[#1B3E6F] text-white rounded-xl p-8 md:p-10 flex flex-col justify-between min-h-[260px]">
+            <div className="h-full bg-[#1B3E6F] text-white rounded-xl p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[260px]">
               <div>
                 <Wrench size={22} weight="light" className="mb-6 opacity-70" />
                 <h3 className="text-2xl font-bold tracking-tight mb-3">Kitchen Remodels</h3>
@@ -129,9 +129,9 @@ export default function ServicesGrid() {
           {/* ADU — second large card */}
           <motion.div
             variants={cardVariants}
-            className="md:col-span-5 group"
+            className="col-span-2 md:col-span-5 group"
           >
-            <div className="h-full bg-white rounded-xl p-8 flex flex-col justify-between min-h-[260px] ring-1 ring-black/6">
+            <div className="h-full bg-white rounded-xl p-8 flex flex-col justify-between min-h-[220px] md:min-h-[260px] ring-1 ring-black/6">
               <div>
                 <House size={22} weight="light" className="mb-6 text-[#2451a3]" />
                 <h3 className="text-xl font-bold tracking-tight text-[#111111] mb-3">ADU Construction</h3>
@@ -156,7 +156,7 @@ export default function ServicesGrid() {
               variants={cardVariants}
               className="md:col-span-3 group"
             >
-              <div className="h-full bg-white rounded-xl p-6 flex flex-col ring-1 ring-black/6 min-h-[180px]">
+              <div className="h-full bg-white rounded-xl p-5 flex flex-col ring-1 ring-black/6 min-h-[150px] md:min-h-[180px]">
                 <service.icon size={18} weight="light" className="text-[#4A4642] mb-4 opacity-70" />
                 <h3 className="text-base font-semibold tracking-tight text-[#111111] mb-2">
                   {service.title}

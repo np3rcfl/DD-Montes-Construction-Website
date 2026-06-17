@@ -118,7 +118,7 @@ export default function ServicesPage() {
       {/* Trust strip */}
       <section className="bg-[#0D0D0D] py-10 px-6 border-b border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center md:justify-around gap-8">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-around gap-6 md:gap-8">
             {[
               { value: "B1049017", label: "CSLB Licensed" },
               { value: "15+", label: "Years in Business" },

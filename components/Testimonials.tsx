@@ -59,16 +59,16 @@ export default function Testimonials() {
               className="text-center"
             >
               <Quotes size={32} weight="fill" className="text-white/35 mx-auto mb-6" />
-              <p className="heading-display text-2xl md:text-[2rem] text-white leading-snug tracking-tight max-w-[700px] mx-auto mb-8">
+              <p className="heading-display text-2xl md:text-[2rem] text-white/95 leading-snug tracking-tight max-w-[700px] mx-auto mb-8">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center justify-center gap-1 mb-3">
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} size={13} weight="fill" className="text-white/65" />
+                  <Star key={i} size={14} weight="fill" className="text-amber-400" />
                 ))}
               </div>
               <p className="font-semibold text-white text-sm">{t.author}</p>
-              <p className="text-xs text-white/35 mt-0.5">
+              <p className="text-xs text-white/55 mt-0.5">
                 {t.location} &middot; {t.source}
               </p>
             </motion.div>

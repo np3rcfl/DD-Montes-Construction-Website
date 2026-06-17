@@ -76,6 +76,17 @@ img {
   letter-spacing: -0.02em;
 }
 
+/* Marquee scroll animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: inline-flex;
+  will-change: transform;
+}
+
 /* Hide scrollbar for filter strips */
 .scrollbar-hide {
   -ms-overflow-style: none;

@@ -1,79 +1,42 @@
-﻿"use client";
+"use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
-
-type Stat =
-  | { type: "counter"; value: number; suffix: string; label: string }
-  | { type: "text"; text: string; sub: string; label: string };
-
-const stats: Stat[] = [
-  { type: "counter", value: 15, suffix: "+", label: "Years in Business" },
-  { type: "counter", value: 14, suffix: "", label: "Cities Served" },
-  { type: "text", text: "CSLB", sub: "B1049017", label: "Licensed & Bonded" },
-  { type: "text", text: "LA County", sub: "South Bay Focus", label: "Service Area" },
+const items = [
+  { value: "15+", label: "Years Experience" },
+  { value: "14", label: "Cities Served" },
+  { value: "100+", label: "Projects Delivered" },
+  { value: "CSLB", sub: "B1049017", label: "Licensed & Bonded" },
+  { value: "100%", label: "Permitted Work" },
+  { value: "LA County", sub: "South Bay", label: "Service Area" },
+  { value: "Bonded", label: "& Insured" },
 ];
 
-function Counter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-
-  useEffect(() => {
-    if (!isInView) return;
-    let start = 0;
-    const duration = 1400;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [isInView, target]);
-
-  return (
-    <span ref={ref} className="tabular-nums">
-      {count}
-      {suffix}
-    </span>
-  );
-}
+const doubled = [...items, ...items];
 
 export default function TrustStrip() {
   return (
-    <section className="bg-[#111111] py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center px-6 py-2 first:pl-0 last:pr-0"
-            >
-              {stat.type === "counter" ? (
-                <div className="text-4xl md:text-5xl font-bold text-white tracking-tighter leading-none">
-                  <Counter target={stat.value} suffix={stat.suffix} />
-                </div>
-              ) : (
-                <div className="flex flex-col items-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-none">
-                    {stat.text}
-                  </div>
-                  <div className="text-[10px] text-white/50 font-medium mt-1 uppercase tracking-widest">
-                    {stat.sub}
-                  </div>
+    <section className="bg-[#0D0D0D] py-8 overflow-hidden border-y border-white/5">
+      <div className="flex animate-marquee whitespace-nowrap">
+        {doubled.map((item, i) => (
+          <div
+            key={i}
+            className="inline-flex items-center gap-8 mx-10 shrink-0"
+          >
+            <div className="flex flex-col items-center min-w-[80px]">
+              <div className="text-3xl font-bold text-white tracking-tight leading-none">
+                {item.value}
+              </div>
+              {item.sub && (
+                <div className="text-[10px] text-white/40 font-medium uppercase tracking-widest mt-0.5">
+                  {item.sub}
                 </div>
               )}
-              <div className="text-xs text-white/40 font-medium uppercase tracking-widest mt-2 text-center">
-                {stat.label}
+              <div className="text-[10px] text-white/35 font-medium uppercase tracking-widest mt-1 text-center">
+                {item.label}
               </div>
             </div>
-          ))}
-        </div>
+            <span className="text-white/15 text-lg font-light">·</span>
+          </div>
+        ))}
       </div>
     </section>
   );

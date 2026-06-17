@@ -138,9 +138,9 @@ export default function Hero() {
               className="flex flex-wrap gap-x-10 gap-y-4 pt-6 border-t border-white/10"
             >
               {[
-                { value: "15+", label: "Years in Business" },
+                { value: "15+", label: "Years Experience" },
                 { value: "14", label: "Cities Served" },
-                { value: "100%", label: "Permitted Work" },
+                { value: "100+", label: "Projects Delivered" },
               ].map((s) => (
                 <div key={s.label} className="flex flex-col">
                   <span className="text-[1.6rem] font-bold text-white tracking-tight leading-none">
@@ -203,7 +203,7 @@ export default function Hero() {
               <div className="bg-[#1B3E6F] rounded-xl p-4 ring-1 ring-white/10 flex flex-col justify-between">
                 <div className="flex gap-0.5 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={12} weight="fill" className="text-white/70" />
+                    <Star key={i} size={12} weight="fill" className="text-amber-400" />
                   ))}
                 </div>
                 <div>
