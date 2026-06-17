@@ -1,0 +1,4 @@
+# DD Montes Construction — pitch preview (password-gated)
+# Blocked until domain goes live post-contract
+User-agent: *
+Disallow: /
