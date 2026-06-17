@@ -110,10 +110,16 @@ const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 export default function ProjectsGrid() {
   const [active, setActive] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered = active === "All"
     ? projects
     : projects.filter((p) => p.category === active);
+
+  const handleFilter = (cat: string) => {
+    setActive(cat);
+    setShowAll(false);
+  };
 
   return (
     <>
@@ -124,7 +130,7 @@ export default function ProjectsGrid() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActive(cat)}
+                onClick={() => handleFilter(cat)}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-250 whitespace-nowrap shrink-0 ${
                   cat === active
                     ? "bg-[#1B3E6F] text-white border-[#1B3E6F] shadow-[0_2px_8px_rgba(27,62,111,0.3)]"
@@ -160,7 +166,7 @@ export default function ProjectsGrid() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.4, ease }}
-                    className="break-inside-avoid mb-5"
+                    className={`break-inside-avoid mb-5 ${!showAll && i >= 6 ? "hidden md:block" : ""}`}
                   >
                     <motion.div
                       whileHover={{ y: -4 }}
@@ -204,6 +210,18 @@ export default function ProjectsGrid() {
               )}
             </motion.div>
           </AnimatePresence>
+
+          {/* Show all button — mobile only */}
+          {!showAll && filtered.length > 6 && (
+            <div className="mt-6 text-center md:hidden">
+              <button
+                onClick={() => setShowAll(true)}
+                className="px-6 py-3 rounded-full bg-[#1B3E6F] text-white text-sm font-semibold hover:bg-[#2451a3] transition-all duration-200 active:scale-[0.98]"
+              >
+                Show all {filtered.length} projects
+              </button>
+            </div>
+          )}
 
           <div className="mt-10 text-center">
             <p className="text-sm text-[#4A4642]">
