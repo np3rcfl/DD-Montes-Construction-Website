@@ -83,9 +83,9 @@ export default function Hero() {
               </span>
               <span
                 className="block italic text-[#6BA8D4] mt-3"
-                style={{ fontSize: "clamp(2.8rem, 7vw, 5.2rem)", letterSpacing: "0.01em" }}
+                style={{ fontSize: "clamp(3.4rem, 8vw, 6rem)", letterSpacing: "0.01em" }}
               >
-                Every Trade, Every Permit.
+                Every Permit Pulled.
               </span>
             </motion.h1>
 
