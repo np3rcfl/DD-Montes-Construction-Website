@@ -88,10 +88,10 @@ export default function ServicesGrid() {
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#1B3E6F] hover:text-[#2451a3] transition-colors shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#1B3E6F] text-[#1B3E6F] text-sm font-semibold hover:bg-[#1B3E6F] hover:text-white transition-all duration-200 shrink-0"
           >
             All Services
-            <ArrowUpRight size={15} weight="bold" />
+            <ArrowUpRight size={14} weight="bold" />
           </Link>
         </div>
 
@@ -118,10 +118,10 @@ export default function ServicesGrid() {
               </div>
               <Link
                 href="/services"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors group-hover:gap-3"
+                className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/15 text-white text-sm font-semibold hover:bg-white/25 transition-all duration-200 self-start"
               >
                 See scope of work
-                <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight size={14} />
               </Link>
             </div>
           </motion.div>
@@ -141,10 +141,10 @@ export default function ServicesGrid() {
               </div>
               <Link
                 href="/services"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-[#1B3E6F] hover:text-[#2451a3] transition-colors group-hover:gap-3"
+                className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#1B3E6F]/10 text-[#1B3E6F] text-sm font-semibold hover:bg-[#1B3E6F]/20 transition-all duration-200 self-start"
               >
                 Learn more
-                <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight size={14} />
               </Link>
             </div>
           </motion.div>

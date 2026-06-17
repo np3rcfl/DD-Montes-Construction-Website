@@ -79,13 +79,13 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="heading-display leading-[0.92] tracking-tight mb-6">
               <span className="block text-[3.8rem] sm:text-[5rem] xl:text-[6.4rem] text-white">
-                Built Right,
+                One Contractor.
               </span>
               <span
                 className="block italic text-[#6BA8D4] mt-3"
-                style={{ fontSize: "clamp(3.4rem, 8vw, 6rem)", letterSpacing: "0.01em" }}
+                style={{ fontSize: "clamp(2.8rem, 7vw, 5.2rem)", letterSpacing: "0.01em" }}
               >
-                Every Time.
+                Every Trade, Every Permit.
               </span>
             </motion.h1>
 
