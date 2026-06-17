@@ -77,13 +77,13 @@ export default function Hero() {
             </motion.p>
 
             {/* Headline */}
-            <motion.h1 variants={itemVariants} className="heading-display leading-[0.92] tracking-tight mb-6">
-              <span className="block text-[3.8rem] sm:text-[5rem] xl:text-[6.4rem] text-white">
+            <motion.h1 variants={itemVariants} className="heading-display leading-[0.92] tracking-tight mb-4">
+              <span className="block text-[2.8rem] sm:text-[3.6rem] xl:text-[4.8rem] text-white">
                 One Contractor.
               </span>
               <span
-                className="block italic text-[#6BA8D4] mt-3"
-                style={{ fontSize: "clamp(3.4rem, 8vw, 6rem)", letterSpacing: "0.01em" }}
+                className="block italic text-[#6BA8D4] mt-2"
+                style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)", letterSpacing: "0.01em" }}
               >
                 Every Permit Pulled.
               </span>
@@ -92,7 +92,7 @@ export default function Hero() {
             {/* Typewriter */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-3 mb-7"
+              className="flex items-center gap-3 mb-5"
             >
               <span className="text-[11px] font-medium text-white/35 uppercase tracking-[0.22em]">
                 Specialists in
@@ -110,13 +110,13 @@ export default function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-[0.97rem] text-white/60 leading-relaxed max-w-[450px] mb-10"
+              className="text-[0.97rem] text-white/60 leading-relaxed max-w-[450px] mb-6"
             >
               Licensed, bonded, and based in Hawthorne. Complete home renovations across LA County. Every project permitted and inspected from day one.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-14">
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-8">
               <Link
                 href="/about#contact"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-[#111111] text-sm font-bold rounded-full hover:bg-[#F0EDE8] transition-all duration-200 active:scale-[0.98]"

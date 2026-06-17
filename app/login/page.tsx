@@ -35,7 +35,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-[#111111] flex flex-col items-center justify-center px-6">
       {/* Logo */}
-      <div className="mb-10">
+      <div className="mb-10 bg-white rounded-xl px-6 py-4">
         <Image
           src="/images/logo.png"
           alt="DD Montes Construction"
