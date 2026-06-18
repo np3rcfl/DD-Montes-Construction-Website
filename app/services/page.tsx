@@ -142,7 +142,7 @@ export default function ServicesPage() {
         return (
           <section
             key={service.title}
-            className={`relative overflow-hidden py-24 px-6 ${isDark ? "bg-[#111111]" : "bg-[#F8F7F4]"}`}
+            className={`relative overflow-hidden py-24 px-6 ${isDark ? "bg-gradient-to-b from-[#1C1A1A] to-[#111111]" : "bg-[#F8F7F4]"}`}
           >
             {isDark ? (
               <SubtleGlow color="#1B3E6F" position={i % 4 === 0 ? "bottom" : "top"} />

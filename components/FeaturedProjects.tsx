@@ -52,7 +52,7 @@ function fadeInProps(delay: number = 0) {
 
 export default function FeaturedProjects() {
   return (
-    <section className="section-gap bg-[#111111] relative overflow-hidden">
+    <section className="section-gap bg-gradient-to-b from-[#1C1A1A] to-[#111111] relative overflow-hidden">
       <SubtleGlow color="#2451a3" position="top" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}

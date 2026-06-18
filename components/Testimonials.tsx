@@ -41,7 +41,7 @@ export default function Testimonials() {
   const t = testimonials[active];
 
   return (
-    <section className="section-gap bg-[#111111]">
+    <section className="section-gap bg-gradient-to-b from-[#1C1A1A] to-[#111111]">
       <div className="max-w-5xl mx-auto px-6 text-center">
 
         <p className="text-[11px] font-medium tracking-[0.22em] uppercase text-white/55 mb-3">

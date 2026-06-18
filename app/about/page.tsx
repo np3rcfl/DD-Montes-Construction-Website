@@ -121,7 +121,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust credentials */}
-      <section className="section-gap bg-[#111111] px-6 relative overflow-hidden">
+      <section className="section-gap bg-gradient-to-b from-[#1C1A1A] to-[#111111] px-6 relative overflow-hidden">
         <SubtleGlow color="#1B3E6F" position="center" />
         <div className="max-w-7xl mx-auto">
           <FadeIn>

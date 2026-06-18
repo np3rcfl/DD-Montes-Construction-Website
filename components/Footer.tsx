@@ -4,7 +4,7 @@ import { Phone, MapPin, Certificate, InstagramLogo } from "@phosphor-icons/react
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-white font-sans">
+    <footer className="bg-[#161616] text-white font-sans">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/10">
 
