@@ -57,7 +57,7 @@ export default function Nav() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-[100] transition-all duration-400"
+        className="fixed top-0 left-0 right-0 z-[100] transition-all duration-400 font-sans"
         style={{
           backgroundColor: transparent ? "transparent" : "#1B3E6F",
           boxShadow: scrolled ? "0 2px 24px rgba(0,0,0,0.28)" : "none",

@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Figtree } from "next/font/google";
+import { Fraunces, Spectral, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const dmSerifDisplay = DM_Serif_Display({
+const fraunces = Fraunces({
   variable: "--font-serif-display",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700", "900"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const figtree = Figtree({
+const spectral = Spectral({
+  variable: "--font-serif-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -72,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSerifDisplay.variable} ${figtree.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${spectral.variable} ${dmSans.variable}`}>
       <head>
         <script
           type="application/ld+json"
